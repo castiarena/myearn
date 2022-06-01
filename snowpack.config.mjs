@@ -14,6 +14,10 @@ export default {
         ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
       },
     ],
+    ['@snowpack/plugin-webpack', {
+      manifest: true,
+      htmlMinifierOptions: true,
+    }]
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -21,7 +25,10 @@ export default {
   ],
   optimize: {
     /* Example: Bundle your final build: */
-    // "bundle": true,
+    bundle: true,
+    minify: true,
+    target: 'es2019',
+    treeshake: true
   },
   packageOptions: {
     /* ... */
