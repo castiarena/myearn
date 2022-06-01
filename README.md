@@ -1,4 +1,4 @@
-# New Project
+# myearn
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
