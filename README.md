@@ -1,6 +1,7 @@
 # myearn
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+Project for calculate how much money you're earning 
+daily, monthly and monthly
 
 ## Available Scripts
 
