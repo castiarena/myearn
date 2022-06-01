@@ -1,8 +1,8 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
   mount: {
-    public: { url: '/', static: true },
-    src: { url: '/dist' },
+    public: { url: '/', static: true, dot: true },
+    src: { url: '/dist', dot: true },
   },
   plugins: [
     '@snowpack/plugin-react-refresh',
@@ -14,10 +14,6 @@ export default {
         ...(process.versions.pnp ? { tsc: 'yarn pnpify tsc' } : {}),
       },
     ],
-    ['@snowpack/plugin-webpack', {
-      manifest: true,
-      htmlMinifierOptions: true,
-    }]
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -27,11 +23,7 @@ export default {
     /* Example: Bundle your final build: */
     bundle: true,
     minify: true,
-    target: 'es2019',
     treeshake: true
-  },
-  packageOptions: {
-    /* ... */
   },
   devOptions: {
     /* ... */
@@ -39,4 +31,11 @@ export default {
   buildOptions: {
     /* ... */
   },
+  packageOptions: {
+    knownEntrypoints: [
+      '@chakra-ui/hooks',
+      '@chakra-ui/hooks/use-animation-state',
+      'framesync'
+    ]
+  }
 };
