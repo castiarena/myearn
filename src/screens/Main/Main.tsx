@@ -1,6 +1,6 @@
 import React, { VFC } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import { Layout } from '../../layout/Layout'
+import { Layout } from '../../layout'
 
 const Home = React.lazy(() => import('../Home'))
 

@@ -10,7 +10,7 @@ export const Layout: FC = ({ children }) => (
     <GridItem>
       <Header />
     </GridItem>
-    <GridItem backgroundColor="brand.900">
+    <GridItem backgroundColor="brand.400">
       <Box p={2}>{children}</Box>
     </GridItem>
     <GridItem>
